@@ -28,3 +28,6 @@ session
 kadira:blaze-layout
 kadira:flow-router
 zimme:active-route
+accounts-facebook
+accounts-ui
+facebook-config-ui
