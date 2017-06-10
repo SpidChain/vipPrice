@@ -14,10 +14,9 @@
   "server": {
     "host": "82.196.1.113",
     "username": "root",
-    "password": "",
+    "password": "xxxyyyzzzttt",
     "deploymentDir": "/opt/vip-price",
     "exec_mode": "cluster_mode",
     "instances": 1
   }
 }
-
