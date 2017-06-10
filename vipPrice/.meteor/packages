@@ -25,3 +25,6 @@ alanning:roles
 themeteorchef:bert
 twbs:bootstrap
 session
+kadira:blaze-layout
+kadira:flow-router
+zimme:active-route
