@@ -1,7 +1,14 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+  //used to test users publications
+  /*
+  if(! Meteor.users || Meteor.users.find().count() < 2) {
+    Accounts.createUser({username: "ciro", password: "xxxxxx"})
+    Accounts.createUser({username: "lorenzo", password: "xxxxxx"})
+    Accounts.createUser({username: "duccio", password: "xxxxxx"})
+  }
+  */
 });
 
 Accounts.onCreateUser(function(options, user) {
