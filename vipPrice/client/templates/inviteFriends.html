@@ -3,7 +3,8 @@
   inviteFriends
   <ul>
   {{#each users}}
-  <li> {{profile.name}} </li> 
+  {{profile.picture}}
+  <li> <img src="http://graph.facebook.com/10213445522472865/picture/?type=square" alt="profile picture" style="width:50px;height:50px;">{{profile.name}} </li> 
   {{/each}}
   </ul>
   {{else}}
