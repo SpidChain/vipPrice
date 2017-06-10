@@ -7,7 +7,7 @@ Template.inviteFriends.events({
         e.preventDefault()
         const checked = document.querySelector('input[name="users"]:checked')
         if (checked) {
-            console.log(checked.value);
+            Meteor.users.update(Meteor.userId(), {$set: {'profile.endorser': checked.value}})
         }
     }
 })
