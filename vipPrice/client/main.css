@@ -2,3 +2,12 @@
 .container.main{
   margin-top: 60px;
 }
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 5px;
+  width: auto;
+}
