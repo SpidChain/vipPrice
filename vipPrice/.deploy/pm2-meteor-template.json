@@ -1,0 +1,23 @@
+{
+  "appName": "vip-price",
+  "appLocation": {
+    "local": "../"
+  },
+  "meteorSettingsLocation": "./settings.json",
+  "meteorBuildFlags": "--architecture os.linux.x86_64",
+  "meteorSettingsInRepo": false,
+  "env": {
+    "ROOT_URL": "http://82.196.1.113",
+    "PORT": 80,
+    "MONGO_URL": "mongodb://localhost:27017/vip-price"
+  },
+  "server": {
+    "host": "82.196.1.113",
+    "username": "root",
+    "password": "",
+    "deploymentDir": "/opt/vip-price",
+    "exec_mode": "cluster_mode",
+    "instances": 1
+  }
+}
+
