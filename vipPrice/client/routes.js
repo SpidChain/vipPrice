@@ -1,7 +1,6 @@
 FlowRouter.route('/', {
     action: function() {
-        BlazeLayout.render("website", {content: "home"});
+        BlazeLayout.render("main", {content: "home"});
     },
     name:"home"
 });
-
