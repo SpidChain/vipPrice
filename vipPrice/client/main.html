@@ -37,11 +37,21 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="/login/">
-              <i class="fa fa-lock"></i> login
+                <i class="fa fa-lock"></i> Login
               </a>
             </li>
-            <li><a href="/inviteFriends">Invita Amici</a></li>
-            <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+            <li>
+              <a href="/inviteFriends">
+                <i class="fa fa-users"></i>
+                Invita Amici
+              </a>
+            </li>
+            <li class="{{isActiveRoute name='home'}}">
+              <a href="/">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
