@@ -31,14 +31,14 @@ FlowRouter.route('/claims', {
 
 FlowRouter.route('/endorse', {
     action: function() {
-        BlazeLayout.render("main", {content: "endorse"});
+        BlazeLayout.render("main", {content: "endorse2"});
     },
     name:"endorse"
 });
 
 FlowRouter.route('/endorse/:id', {
     action: function() {
-        BlazeLayout.render("main", {content: "endorseUser"});
+        BlazeLayout.render("main", {content: "endorse2"});
     },
     name:"endorseUser"
 });

@@ -1,12 +1,25 @@
 <template name="endorse2">
   {{#if Template.subscriptionsReady}}
   {{#if currentUser}}
-  <div>
-    {{endorsement}}
-    <button type="button" class="btn">Si</button>
-    <button type="button" class="btn">No</button>
-    <button type="button" class="btn">Salta</button>
+    <div class="panel-body">
+        <img src="{{user.profile.picture}}" alt="profile picture" class="profileImageList">
+        {{user.profile.name}}
+        {{claim}}
+          <div class="pull-right action-buttons">
+<!--
+                <i class="fa fa-close"></i>
+
+
+                <i class="fa fa-check"></i>
+-->
+
+                <button type="button" name="yes" class="btn btn-default">Si</button>
+                <button type="button" name="no" class="btn btn-default">No</button>
+                <button type="button" name="skip" class="btn btn-default">Salta</button>
+
+          </div>
   </div>
+
   {{/if}}
   {{else}}
   <p> loading... </p>
