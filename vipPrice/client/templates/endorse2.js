@@ -59,7 +59,7 @@ Template.endorse2.events({
         }
         console.log(claims.length);
         console.log((claimNo + 1) % claims.length);
-        t.claimNo.set((claimNo + 1) % 3)
+        t.claimNo.set((claimNo + 1) % claims.length)
         if (claimNo === 2) {
             FlowRouter.go('home')
         }
