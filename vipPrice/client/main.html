@@ -73,7 +73,35 @@
     </nav>
 
     <div class="container main">
-      {{>Template.dynamic template=content}}
+      {{#if currentUser}}
+        {{>Template.dynamic template=content}}
+      {{else}}
+      <!--
+          {{#if loggingIn}}
+              {{>spinner}}
+          {{/if}}
+        -->
+
+        <div class="text-center">
+
+          <h2>
+            Scopri cosa pensano di te i tuoi amici!
+          </h2>
+          <p class="">
+            Gioca al Tinder del match di identità
+            <br>
+            potrai scoprire i servizi più adatti per te!
+          </p>
+          <br>
+
+          {{> loginButtons}}
+
+        </div>
+
+
+      {{/if}}
+
+
     </div> <!-- /container -->
 
 </template>

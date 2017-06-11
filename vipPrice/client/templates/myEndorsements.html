@@ -1,5 +1,5 @@
 <template name="myEndorsements">
-    {{#if currentUser}}
+
     <div class="panel-body">
         <ul class="list-group">
             {{#each endorsements}}
@@ -11,14 +11,10 @@
                     <i class="fa fa-check"  data-claim="{{this.claim}}" data-action="share"></i>
                 </div>
             </li>
+            {{else}}
+              Nessun parere da parte dei tuoi amici
             {{/each}}
         </ul>
     </div>
-    {{else}}
-        {{#if loggingIn}}
-            {{>spinner}}
-        {{else}}
-            Nothing
-        {{/if}}
-    {{/if}}
+    
 </template>

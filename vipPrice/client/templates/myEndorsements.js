@@ -1,11 +1,19 @@
 import claims from '/imports/claims'
 
 Template.myEndorsements.helpers({
-    endorsements: () => Meteor.user().profile.endorsements.filter((e) => e.share === undefined && e.result)
-        .map((e) => {
-            const endorser = Meteor.users.findOne(e.endorser)
-            return {...e, name: endorser.profile.name, picture: endorser.profile.picture, statement: claims[e.claim]}
-        })
+    endorsements: () => {
+      if(Meteor.user().profile.endorsements){
+        const endorsements= Meteor.user().profile.endorsements.filter((e) => e.share === undefined && e.result)
+            .map((e) => {
+                const endorser = Meteor.users.findOne(e.endorser)
+                return {...e, name: endorser.profile.name, picture: endorser.profile.picture, statement: claims[e.claim]}
+            })
+            return endorsements
+      }else{
+        return ;
+      }
+
+    }
 })
 
 Template.myEndorsements.events({
