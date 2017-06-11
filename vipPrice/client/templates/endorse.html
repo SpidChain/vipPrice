@@ -1,0 +1,9 @@
+<template name="endorse">
+    {{#if Template.subscriptionsReady}}
+        {{#each requests}}
+        {{> endorseCard this}}
+        {{/each}}
+    {{else}}
+        {{>spinner}}
+    {{/if}}
+</template>
