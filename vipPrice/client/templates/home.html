@@ -1,12 +1,14 @@
 <template name="home">
   <!-- Main component for a primary marketing message or call to action -->
   <div class="jumbotron">
-    {{> loginButtons}}
-    
+
+
     {{#if currentUser}}
       {{#if pic}}
         <img src={{pic}}>
       {{/if}}
+    {{else}}
+      {{> loginButtons}}
     {{/if}}
 
 
