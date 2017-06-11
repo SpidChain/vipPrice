@@ -5,14 +5,14 @@ Template.inviteFriends.onCreated(() => {
 })
 
 Template.inviteFriends.helpers({
-
+/*
+$and: [
+  {'_id': { $ne : Meteor.userId() }},
+  {    'profile.endorsement': {  $not: { $elemMatch :{endorser: Meteor.userId()} }  }    }
+]
+*/
    users: () => Meteor.users.find(
-    {
-      $and: [
-        {'_id': { $ne : Meteor.userId() }},
-        {'profile.endorsement': {$not: {$elemMatch :{endorser: Meteor.userId()}}}}
-      ]
-    }
+    {'_id': { $ne : Meteor.userId() }}
   ),
 
    usersCount: () => {
