@@ -27,6 +27,7 @@ FlowRouter.route('/claims', {
         BlazeLayout.render("main", {content: "claims"});
     },
     name:"claims"
+});
 
 FlowRouter.route('/endorse', {
     action: function() {
