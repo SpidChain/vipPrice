@@ -47,6 +47,10 @@ Template.endorse2.events({
                     result: bool
                 })
             }
+
+            console.log("endorsements");
+            console.log(endorsements);
+
             const notification = Notifications.findOne({endorser: Meteor.userId(), requester: userId})
             if (notification) {
                 Notifications.remove(notification._id)
@@ -77,5 +81,3 @@ Template.endorse2.helpers({
     return e
 }*/
 })
-
-
