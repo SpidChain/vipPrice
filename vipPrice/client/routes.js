@@ -20,3 +20,11 @@ FlowRouter.route('/inviteFriends', {
     },
     name:"inviteFriends"
 });
+
+
+FlowRouter.route('/claims', {
+    action: function() {
+        BlazeLayout.render("main", {content: "claims"});
+    },
+    name:"claims"
+});
