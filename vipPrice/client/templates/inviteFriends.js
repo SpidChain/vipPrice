@@ -5,7 +5,12 @@ Template.inviteFriends.onCreated(() => {
 })
 
 Template.inviteFriends.helpers({
-   users: () => Meteor.users.find()
+   users: () => Meteor.users.find( {'_id': {$ne : Meteor.userId() }} ),
+   usersCount: () => {
+     var count = Meteor.users.find( {'_id': {$ne : Meteor.userId() }} ).count()
+     console.log(count);
+     return count
+   }
 })
 
 Template.inviteFriends.events({

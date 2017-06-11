@@ -16,17 +16,19 @@
       </li>
     </ul>
   </div>
-
+  {{else}}
+    Nessun amico da invitare 
   {{/each}}
 
 
-  
 
 
+  {{#if usersCount}}
   <button type="submit" class="btn btn-lg btn-success" style="width:100%;margin-top:10px;">
     <i class="fa fa-plain"></i>
     Invita
   </button>
+  {{/if}}
   </form>
   {{else}}
   {{>spinner}}
