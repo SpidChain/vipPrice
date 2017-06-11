@@ -24,7 +24,8 @@ Template.endorseUser.events({
         for(let i = 0; i < checked.length; i ++) {
             endorsements.push({
                 claim: checked[i].value,
-                endorser: Meteor.userId()
+                endorser: Meteor.userId(),
+                share: false
             })
         }
         const notification = Notifications.findOne({endorser: Meteor.userId(), requester: userId})

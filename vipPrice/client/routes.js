@@ -34,3 +34,10 @@ FlowRouter.route('/endorse/:id', {
     },
     name:"endorseUser"
 });
+
+FlowRouter.route('/myEndorsements', {
+    action: function() {
+        BlazeLayout.render("main", {content: "myEndorsements"});
+    },
+    name: 'myEndorsements'
+});
