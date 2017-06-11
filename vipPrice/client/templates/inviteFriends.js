@@ -50,11 +50,14 @@ Template.inviteFriends.events({
         const checked = document.querySelector('input[name="users"]:checked')
         console.log(checked);
         if (checked) {
+            Meteor.users.update( Meteor.userId(), { $set: { 'profile.endorsements':[] } } )
 
             Meteor.users.update(Meteor.userId(), {$set: {'profile.endorser': checked.value}})
             console.log("id: " + checked.value);
             console.log({requester: Meteor.userId()});
             Notifications.insert({endorser: checked.value, requester: Meteor.userId()})
+
+
         }
     }
 })
