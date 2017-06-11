@@ -31,7 +31,7 @@ FlowRouter.route('/claims', {
 
 FlowRouter.route('/endorse', {
     action: function() {
-        BlazeLayout.render("main", {content: "endorse2"});
+        BlazeLayout.render("main", {content: "endorse"});
     },
     name:"endorse"
 });

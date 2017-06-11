@@ -9,7 +9,7 @@ Template.inviteFriends.helpers({
 })
 
 Template.inviteFriends.events({
-  'change .form-check-input':  (e,t) => {
+/*  'change .form-check-input':  (e,t) => {
     //$(".profileImageList").addClass("selected")
     $(".list-group-item").removeClass("selected")
     const checked = document.querySelector('input[name="users"]:checked').value
@@ -19,11 +19,11 @@ Template.inviteFriends.events({
 
 
 
-  },
+},*/
     'submit': (e) => {
         e.preventDefault()
         const checked = document.querySelector('input[name="users"]:checked')
-        console.log(checked.value);
+        console.log(checked);
         if (checked) {
 
             Meteor.users.update(Meteor.userId(), {$set: {'profile.endorser': checked.value}})
