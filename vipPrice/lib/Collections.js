@@ -5,7 +5,7 @@ Meteor.users.allow({
 });
 
 
-Metor.users.deny({
+Meteor.users.deny({
   insert() { return false; },
   update() { return false; },
   remove() { return false; },
