@@ -1,5 +1,9 @@
 Template.myEndorsements.helpers({
     endorsements: () => Meteor.user().profile.endorsements.filter((e) => e.share === undefined)
+        .map((e) => {
+            const endorser = Meteor.users.findOne(e.endorser)
+            return {...e, name: endorser.profile.name, picture: endorser.profile.picture}
+        })
 })
 
 Template.myEndorsements.events({
