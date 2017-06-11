@@ -1,4 +1,5 @@
 import claims from '/imports/claims'
+import Notifications from '/imports/Notifications'
 
 
 const createEndorsements = (user) => [
@@ -45,6 +46,10 @@ Template.endorse2.events({
                     endorser: Meteor.userId(),
                     result: bool
                 })
+            }
+            const notification = Notifications.findOne({endorser: Meteor.userId(), requester: userId})
+            if (notification) {
+                Notifications.remove(notification._id)
             }
             Meteor.users.update(userId, {$set: {'profile.endorsements': endorsements}})
         }
