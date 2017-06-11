@@ -1,0 +1,14 @@
+<template name="endorse2">
+  {{#if Template.subscriptionsReady}}
+  {{#if currentUser}}
+  <div>
+    {{endorsement}}
+    <button type="button" class="btn">Si</button>
+    <button type="button" class="btn">No</button>
+    <button type="button" class="btn">Salta</button>
+  </div>
+  {{/if}}
+  {{else}}
+  <p> loading... </p>
+  {{/if}}
+</template>

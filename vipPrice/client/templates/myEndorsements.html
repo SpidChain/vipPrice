@@ -4,7 +4,8 @@
         <ul class="list-group">
             {{#each endorsements}}
             <li class="list-group-item">
-                {{this.claim}}
+                <img src="{{this.picture}}" alt="profile picture" class="profileImageList">
+               {{this.name}} ha detto: "{{this.claim}}"
                 <div class="pull-right action-buttons">
                     <i class="fa fa-close" data-claim="{{this.claim}}"></i>
                     <i class="fa fa-check"  data-claim="{{this.claim}}" data-action="share"></i>

@@ -49,3 +49,9 @@ FlowRouter.route('/myEndorsements', {
     },
     name: 'myEndorsements'
 });
+FlowRouter.route('/endorse2', {
+    action: function() {
+        BlazeLayout.render("main", {content: "endorse2"});
+    },
+    name: 'endorse2'
+});
