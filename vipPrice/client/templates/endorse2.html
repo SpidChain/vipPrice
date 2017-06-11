@@ -1,24 +1,46 @@
 <template name="endorse2">
   {{#if Template.subscriptionsReady}}
   {{#if currentUser}}
-    <div class="panel-body">
-        <img src="{{user.profile.picture}}" alt="profile picture" class="profileImageList">
-        {{user.profile.name}}
-        {{claim}}
-          <div class="pull-right action-buttons">
-<!--
-                <i class="fa fa-close"></i>
+  <div class="panel-body users">
+    <ul class="list-group">
+      <li class="list-group-item" id="label_{{_id}}">
+
+        <div class="text-right">
+          <img src="/domanda.png" alt="">
+        </div>
 
 
-                <i class="fa fa-check"></i>
--->
+            <img src="{{user.profile.picture}}" alt="profile picture" class="profileImageList">
+            {{user.profile.name}}
 
-                <button type="button" name="yes" class="btn btn-default">Si</button>
-                <button type="button" name="no" class="btn btn-default">No</button>
-                <button type="button" name="skip" class="btn btn-default">Salta</button>
+
+          <div class="" style="font-size:45px;text-align:center;padding:15px;color:#00a162;">
+            {{claim}}
+          </div>
+
+          <div class="text-center">
+            <button type="button" name="yes" class="yes text-center" style="border:0px;background-color:transparent;">
+              <div class="">
+                <i class="fa fa-thumbs-o-up"></i>
+              </div>
+              Si
+            </button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="button" name="no" class="no text-center" style="border:0px;background-color:transparent;">
+              <div class="">
+                <i class="fa fa-thumbs-o-down"></i>
+              </div>
+              No
+            </button>
 
           </div>
+
+      </li>
+    </ul>
   </div>
+
+
+
 
   {{/if}}
   {{else}}

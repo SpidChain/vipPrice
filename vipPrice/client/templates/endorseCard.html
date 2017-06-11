@@ -1,8 +1,24 @@
 <template name="endorseCard">
+  <div class="panel-body users">
+    <ul class="list-group">
+      <li class="list-group-item" id="label_{{_id}}">
+
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="users" value="{{_id}}">
+            <img src="{{this.profile.picture}}" alt="profile picture" class="profileImageList">
+            {{this.profile.name}}
+          </label>
+
+
+      </li>
+    </ul>
+  </div>
+  <!--
     <div class="card">
        <img class="card-img-top" src="{{this.profile.picture}}">
        <div class="card-block">
            <p class="card-text">{{this.profile.name}}</p>
        </div>
     </div>
+  -->
 </template>

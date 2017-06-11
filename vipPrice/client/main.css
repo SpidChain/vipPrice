@@ -64,3 +64,11 @@ h2{
 #login-buttons .login-button, .accounts-dialog .login-button{
   font-size:25px;
 }
+
+
+button.yes{
+  color:green;font-size:50px;
+}
+button.no{
+  color:red;font-size:50px;
+}
