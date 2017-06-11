@@ -12,9 +12,10 @@ Tracker.autorun(() => {
             const requester = Meteor.users.findOne(r.requester)
             if (requester) {
                 Bert.alert({
-                    title: requester.profile.name + ' is requesting your endorsement',
+                    title: requester.profile.name + ' ti chiede un endorsement',
                     type: 'info'
                 })
+                FlowRouter.go('/endorse')
             }
         })
     }
