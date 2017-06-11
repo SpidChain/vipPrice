@@ -49,3 +49,9 @@
 
 
 .users{}
+
+
+
+#login-buttons .login-button, .accounts-dialog .login-button{
+  font-size:25px;
+}
