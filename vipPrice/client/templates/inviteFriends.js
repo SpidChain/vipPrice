@@ -9,6 +9,17 @@ Template.inviteFriends.helpers({
 })
 
 Template.inviteFriends.events({
+  'click .list-group-item':   (e,t) => {
+    console.log(e.target.id);
+    $("#" + e.target.id + " .form-check-input").removeAttr('checked');
+
+    $("#" + e.target.id + " .form-check-input").prop("checked", true)
+    $(".list-group-item").removeClass("selected")
+    $("#" + e.target.id).addClass("selected")
+
+    //$("#radio_1").prop("checked", true)
+    //console.log(t);
+  },
   'change .form-check-input':  (e,t) => {
     //$(".profileImageList").addClass("selected")
     $(".list-group-item").removeClass("selected")
@@ -27,6 +38,7 @@ Template.inviteFriends.events({
         if (checked) {
 
             Meteor.users.update(Meteor.userId(), {$set: {'profile.endorser': checked.value}})
+            console.log("id: " + checked.value);
             console.log({requester: Meteor.userId()});
             Notifications.insert({endorser: checked.value, requester: Meteor.userId()})
         }
