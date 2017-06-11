@@ -1,4 +1,13 @@
 /* CSS declarations go here */
+
+h1{
+  color:#00a162;
+}
+
+h2{
+  color:#00a162;
+}
+
 .container.main{
   margin-top: 60px;
 }
