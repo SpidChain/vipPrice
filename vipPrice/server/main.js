@@ -18,3 +18,7 @@ Accounts.onCreateUser(function(options, user) {
     }
     return user;
 });
+
+Meteor.users.allow({
+    update: () => true
+})
