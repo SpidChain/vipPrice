@@ -1,0 +1,12 @@
+<template name="endorse2">
+  {{#if Meteor.subscriptionsReady}}
+  <div>
+    {{endorsement}}
+    <button type="button" class="btn">Si</button>
+    <button type="button" class="btn">No</button>
+    <button type="button" class="btn">Salta</button>
+  </div>
+  {{else}}
+  <p> loading... </p>
+  {{/if}}
+</template>
