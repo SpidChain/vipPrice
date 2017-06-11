@@ -38,3 +38,14 @@
 .action-buttons .fa-close:hover{opacity: 1.0}
 .action-buttons .fa-check{color:green;opacity: 0.5;cursor:pointer;}
 .action-buttons .fa-check:hover{opacity: 1.0}
+
+.list-group-item.selected{
+  border:red 1px solid;
+}
+
+.list-group-item input[type="radio"]{
+    visibility:hidden;
+}
+
+
+.users{}
