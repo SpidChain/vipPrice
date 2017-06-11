@@ -5,10 +5,37 @@
 
     {{#if currentUser}}
       {{#if pic}}
-        <img src={{pic}}>
+        <div class="row">
+          <div class="col-sm-2">
+            <img src="{{pic}}" style="width:100%;border-radius:500%;">
+          </div>
+          <div class="col-sm-10">
+            <h2>
+              Scopri cosa pensano di te:
+            </h2>
+            <a href="/inviteFriends" class="btn btn-lg btn-success">
+              <i class="fa fa-plane"></i>
+              Invita Amici!
+            </a>
+          </div>
+        </div>
       {{/if}}
     {{else}}
-      {{> loginButtons}}
+      <div class="text-center">
+
+        <h2>
+          Scopri cosa pensano di te i tuoi amici!
+        </h2>
+        <p class="">
+          Gioca al Tinder del match di identità
+          <br>
+          potrai scoprire i servizi più adatti per te!
+        </p>
+        <br>
+
+        {{> loginButtons}}
+
+      </div>
     {{/if}}
 
 
