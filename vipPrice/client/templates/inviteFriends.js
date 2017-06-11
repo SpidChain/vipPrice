@@ -58,6 +58,8 @@ Template.inviteFriends.events({
             Notifications.insert({endorser: checked.value, requester: Meteor.userId()})
 
 
+            FlowRouter.go('/myEndorsements')
+
         }
     }
 })
